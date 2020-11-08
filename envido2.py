@@ -56,7 +56,8 @@ class Jugador:
         mano_dic [carta[0]] = carta[1]
       else:
         lista.append(carta[1])
-        lista.append(mano_dic.get(carta[0]))
+        if len(lista) < 2:
+          lista.append(mano_dic.get(carta[0]))
         mano_dic [carta[0]] = lista
 #    print(mano_dic,"*")
     if len(mano_dic) == 1:
